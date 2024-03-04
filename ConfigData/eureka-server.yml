@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/config-repo
+          search-paths: submodules/config-repo
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    lease-renewal-interval-in-seconds: 0
